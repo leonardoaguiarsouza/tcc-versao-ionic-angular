@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+        Logout
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/note">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list *ngIf="notes">
+    <ion-item button [routerLink]="['/note', note.id]" *ngFor="let note of (notes | async)">
+      <ion-label [color]="note.active ? '' : 'danger'">{{ note.title }} - {{ note.interval }} min.</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

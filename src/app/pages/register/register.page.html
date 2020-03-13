@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Versão Angular</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+      <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div text-center>
+              <h3>Registre-se</h3>
+            </div>
+            <div padding>
+              <ion-item>
+                <ion-label position="floating" autocomplete="off">Nome</ion-label>
+                <ion-input name="name" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Data de nascimento</ion-label>
+                <ion-input name="birthDate" type="date" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">E-mail</ion-label>
+                <ion-input [(ngModel)]="userRegister.email" type="email" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Confirme seu e-mail</ion-label>
+                <ion-input type="email" required autocomplete="off"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Senha</ion-label>
+                <ion-input [(ngModel)]="userRegister.password" type="password" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Confirme sua senha</ion-label>
+                <ion-input name="password" type="password" required autocomplete="off"></ion-input>
+              </ion-item>
+            </div>
+            <div padding>
+              <ion-button expand="block" (click)="register()">cadastre-se</ion-button>
+            </div>
+            <div class="ion-padding-horizontal ion-padding-bottom links">
+              <a routerLink="/login" routerDirection="back" class="highlighted">Fazer login</a>
+            </div>
+            <div text-center>
+              <ion-label>Ou então</ion-label>
+            </div>
+            <div padding>
+              <ion-button color="danger" expand="block" (click)="loginGoogle()"><ion-icon slot="start" name="logo-google"></ion-icon>Entre com Google</ion-button>
+              <ion-button color="tertiary" expand="block" (click)="loginFacebook()"><ion-icon slot="start" name="logo-facebook"></ion-icon>Entre com Facebook</ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-content>
+  
