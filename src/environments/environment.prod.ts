@@ -5,7 +5,7 @@ export const environment = {
     authDomain: "tcc-leonardo-souza.firebaseapp.com",
     databaseURL: "https://tcc-leonardo-souza.firebaseio.com",
     projectId: "tcc-leonardo-souza",
-    storageBucket: "",
+    storageBucket: "tcc-leonardo-souza.appspot.com",
     messagingSenderId: "240363708571",
     appId: "1:240363708571:web:959a869f14130c6b88e63e"
   }

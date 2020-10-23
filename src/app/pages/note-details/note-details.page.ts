@@ -41,7 +41,7 @@ export class NoteDetailsPage implements OnInit {
     this.note.lastModify = new Date();
     this.noteService.addNote(this.note).then(() => {
       this.router.navigateByUrl('/home');
-      this.showToast('Ideia criada');
+      this.showToast('Nota criada');
     }, err => {
       this.showToast('Houve um problema :(');
     });
@@ -50,7 +50,7 @@ export class NoteDetailsPage implements OnInit {
   deleteNote() {
     this.noteService.deleteNote(this.note.id).then(() => {
       this.router.navigateByUrl('/home');
-      this.showToast('Note deletada');
+      this.showToast('Nota excluída');
     }, err => {
       this.showToast('Ouve um problema :(');
     });
@@ -60,7 +60,7 @@ export class NoteDetailsPage implements OnInit {
     this.note.lastModify = new Date();
     this.noteService.updateNote(this.note).then(() => {
       this.router.navigateByUrl('/home');
-      this.showToast('Note atualizada');
+      this.showToast('Nota atualizada');
     }, err => {
       this.showToast('Ouve um problema :(');
     });
